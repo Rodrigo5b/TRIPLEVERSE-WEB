@@ -1,0 +1,34 @@
+TRIPLEVERSE - PRESENTACIÓN WEB PARA PC
+====================================
+
+Archivos:
+  index.html           Toda la presentación en una sola página
+  styles.css           Estilos CSS separados, ordenados por sección
+  Imagenes/            Ilustraciones de TripleVerse y los tres juegos
+
+Para usar:
+1) Extraer todo el contenido del archivo ZIP.
+2) Abrir index.html con Chrome, Edge o Firefox en una computadora.
+3) Usar los enlaces del submenú para ir a cada sección.
+
+Diseño:
+- Pensado para pantalla grande y proyector, sin versiones para celular.
+- Paleta de negro y verde inspirada en la terminal de PSeInt.
+- Sólo HTML5 y CSS básico, sin JavaScript, Bootstrap o librerías.
+- Clases CSS con nombres claros y en español.
+
+Logo:
+En index.html buscar <div class="espacio-logo">.
+Podés reemplazar su contenido por una imagen, por ejemplo:
+  <img src="Imagenes/logo.png" alt="Logo TripleVerse">
+Y colocar logo.png en la carpeta Imagenes. Si lo hacés, quizás debas
+ajustar las propiedades de la clase .espacio-logo en styles.css.
+
+Formulario:
+El formulario usa action="mailto:" porque todavía no se proporcionó
+un correo del equipo. Al pulsar «Preparar correo» intenta abrir la
+aplicación de correo configurada en la computadora; no envía por sí solo.
+Para establecer un destinatario, cambiarlo por:
+  action="mailto:correo-real-del-equipo@ejemplo.com"
+No funciona como un formulario de envío automático: para eso haría falta
+un servidor o servicio externo, fuera del alcance de HTML + CSS puro.

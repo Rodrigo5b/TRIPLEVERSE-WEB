@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TripleVerse | Presentación del proyecto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header id="inicio" class="encabezado">
+        <div class="espacio-logo">
+           <img class ="img-logo"src="Imagenes/TITULO.png" alt="Logo de TripleVerse">
+        </div>
+        <div class="nombre-proyecto">
+            <h1>TRIPLE<span>VERSE</span></h1>
+            <p>Colección de juegos en PSeInt</p>
+        </div>
+        <p class="anio">Proyecto final · 2026</p>
+    </header>
+
+    <nav class="navegacion">
+        <a href="#tripleverse">TripleVerse</a>
+        <a href="#juegos">Juegos</a>
+        <a href="#dificultades">Dificultades</a>
+        <a href="#logica">Lógica del proyecto</a>
+        <a href="#nosotros">Información sobre nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+        <!-- TRIPLEVERSE -->
+        <section id="tripleverse" class="seccion portada">
+            <div class="texto-portada">
+                <p class="subtitulo">LABORATORIO 1601 · UTN-INSPT</p>
+                <h2>Tres juegos.<br><span>Un solo programa.</span></h2>
+                <p>TripleVerse es una colección de juegos creada íntegramente en <strong>PSeInt</strong>. Integramos <strong>Ludo, Batalla Naval y Truco</strong> en un mismo programa que se controla desde un menú principal.</p>
+                <p>El proyecto nos permitió aplicar estructuras de control, funciones, subprocesos, vectores, matrices y validación de datos.</p>
+                <a class="boton" href="#juegos">Conocer los juegos</a>
+            </div>
+            <div class="imagen-portada">
+                <img src="Imagenes/Screenshot_6.png" alt="Ilustración de la colección Ludo, Batalla Naval y Truco">
+            </div>
+        </section>
+
+        <!-- JUEGOS -->
+        <section id="juegos" class="seccion">
+            <h2>Los tres juegos</h2>
+            <p class="introduccion">Cada juego tiene reglas diferentes, pero los tres comparten el mismo menú principal.</p>
+
+            <div class="fila-juegos">
+                <article class="juego">
+                    <h3>Ludo</h3>
+                    <img src="Imagenes/Screenshot_2.png" alt="Tablero de Ludo con fichas y casillas seguras">
+                    <p><strong>Objetivo:</strong> llevar las cuatro fichas hasta la meta.</p>
+                    <p><strong>Lógica:</strong> tablero 15 × 15, tiradas de dado, posiciones seguras, capturas y recorrido circular.</p>
+                </article>
+                <article class="juego">
+                    <h3>Batalla Naval</h3>
+                    <img src="Imagenes/Screenshot_3.png" alt="Tablero de Batalla Naval con disparos y barcos">
+                    <p><strong>Objetivo:</strong> hundir todos los barcos del rival.</p>
+                    <p><strong>Lógica:</strong> matrices de 10 × 10, coordenadas, disparos, impactos y decisiones de la CPU.</p>
+                </article>
+                <article class="juego">
+                    <h3>Truco argentino</h3>
+                    <img src="Imagenes/Screenshot_1.png" alt="Cartas de una baraja española para representar el Truco">
+                    <p><strong>Objetivo:</strong> ganar las manos y alcanzar el puntaje establecido.</p>
+                    <p><strong>Lógica:</strong> 40 cartas, jerarquías, Envido, Truco, ReTruco y Vale Cuatro.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- DIFICULTADES -->
+        <section id="dificultades" class="seccion fondo-alterno">
+            <p class="subtitulo">02 / MODOS DE JUEGO</p>
+            <h2>Dificultades</h2>
+            <p class="introduccion">La computadora se comporta de manera distinta según el juego y el nivel seleccionado.</p>
+
+            <div class="fila-dificultades">
+                <article class="bloque-dificultad">
+                    <h3>Batalla Naval</h3>
+                    <p><strong>Fácil:</strong> la CPU dispara a posiciones aleatorias, sin repetir tiros.</p>
+                    <p><strong>Difícil:</strong> después de acertar, busca en casillas vecinas para intentar hundir el barco.</p>
+                </article>
+                <article class="bloque-dificultad">
+                    <h3>Truco</h3>
+                    <p><strong>Principiante:</strong> decisiones casi al azar.</p>
+                    <p><strong>Fácil:</strong> usa algunas estrategias sencillas.</p>
+                    <p><strong>Difícil:</strong> analiza cartas y cantos.</p>
+                    <p><strong>Experta:</strong> intenta usar la carta mínima necesaria para ganar y evalúa apuestas.</p>
+                </article>
+                <article class="bloque-dificultad">
+                    <h3>Ludo</h3>
+                    <p><strong>Contra la PC:</strong> una persona juega contra la computadora.</p>
+                    <p><strong>Con amigos:</strong> partida local de 2 a 4 jugadores.</p>
+                    <p>En Ludo elegimos un modo de juego, no un nivel de dificultad.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- LÓGICA DEL PROYECTO -->
+        <section id="logica" class="seccion">
+            <h2>Un programa, tres juegos</h2>
+            <p class="introduccion">Primero desarrollamos cada juego por separado. Después los unimos en un archivo principal y organizamos sus funciones para evitar que se mezclen los datos.</p>
+            <div class="fila-logica">
+                <div class="explicacion-logica">
+                    <h3>Flujo del programa</h3>
+                    <ol>
+                        <li>El usuario entra al <strong>menú principal</strong>.</li>
+                        <li>Elige <strong>Ludo, Batalla Naval o Truco</strong>.</li>
+                        <li>Juega y puede <strong>volver a los menús</strong>.</li>
+                        <li>El sistema cuenta las <strong>partidas iniciadas</strong> de cada juego.</li>
+                    </ol>
+                    <p>Validamos las opciones para que una letra o un número incorrecto no cierre el programa.</p>
+                </div>
+                <div class="ejemplo-codigo">
+                    <h3>Ejemplo del menú en PSeInt</h3>
+                    <pre>Segun opcionJuego Hacer
+    1:
+        EjecutarTruco
+    2:
+        EjecutarLudo
+    3:
+        EjecutarBatallaNaval
+    4:
+        salirJuego &lt;- Verdadero
+FinSegun</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- DESAFÍOS -->
+        <section id="desafios" class="seccion fondo-alterno">
+            <h2>Desafíos del desarrollo</h2>
+            <div class="fila-desafios">
+                <article class="desafio">
+                    <h3>Ludo</h3>
+                    <p>Tuvimos que transformar el número de posición de cada ficha en una casilla del tablero, respetando los recorridos y las posiciones seguras.</p>
+                </article>
+                <article class="desafio">
+                    <h3>Batalla Naval</h3>
+                    <p>Programamos una CPU que, en dificultad difícil, recuerda un impacto y revisa las casillas de alrededor.</p>
+                </article>
+                <article class="desafio">
+                    <h3>Truco</h3>
+                    <p>Representamos las cartas mediante números, establecimos su jerarquía y calculamos los puntos del Envido.</p>
+                </article>
+            </div>
+            <div class="franja-final">
+                <h3>El desafío común</h3>
+                <p>Unir las funciones de los tres juegos sin que los menús, las variables y las partidas se interfieran entre sí. Trabajamos en equipo y usamos GitHub para compartir el código.</p>
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN SOBRE NOSOTROS -->
+        <section id="nosotros" class="seccion">
+            <h2>Información sobre nosotros</h2>
+            <p class="introduccion">Somos tres estudiantes. Cada uno desarrolló un juego y colaboró en la integración final de TripleVerse.</p>
+            <div class="fila-equipo">
+                <article class="integrante">
+                    <h3>Rodrigo Bustamante</h3>
+                    <h4>Ludo y estructura general</h4>
+                    <p>Desarrolló el tablero, las fichas, sus movimientos y las reglas del Ludo. Participó en la organización del repositorio y las pruebas de integración.</p>
+                </article>
+                <article class="integrante">
+                    <h3>Sebastián Marti</h3>
+                    <h4>Batalla Naval</h4>
+                    <p>Desarrolló el tablero, la colocación de barcos, el sistema de disparos y los niveles de dificultad de la computadora.</p>
+                </article>
+                <article class="integrante">
+                    <h3>Ramiro Sánchez</h3>
+                    <h4>Truco e integración</h4>
+                    <p>Programó las reglas del Truco, las decisiones de la CPU, los menús y las estadísticas. Integró los tres juegos en el proyecto final.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- CONTACTO -->
+    <footer id="contacto" class="footer">
+        <p class="subtitulo">TRIPLEVERSE · PROYECTO FINAL</p>
+        <h2>¡Gracias por su atención!</h2>
+        <div class="fila-footer">
+            <div class="datos-footer">
+                <h3>Laboratorio 1601 / Informática Aplicada</h3>
+                <p>Instituto Nacional Superior del Profesorado Técnico</p>
+                <p><strong>Universidad Tecnológica Nacional · UTN-INSPT</strong></p>
+                <p>Rodrigo Bustamante · Sebastián Marti · Ramiro Sánchez</p>
+                <p><a href="https://github.com/Rodrigo5b/Laboratorio-pseint" target="_blank" rel="noopener noreferrer">Ver el código fuente en GitHub</a></p>
+                <p><a href="#inicio">Volver al inicio</a></p>
+            </div>
+            
+
+
+        </div>
+        <p class="footer-final">TripleVerse · 2026 · Página realizada con HTML5 y CSS puro</p>
+    </footer>
+
+</body>
+</html>
